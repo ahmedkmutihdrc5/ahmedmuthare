@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-tajawal: "Tajawal", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Inter", "Tajawal", ui-sans-serif, system-ui, sans-serif;
+  --font-academic: "JetBrains Mono", monospace;
+  
+  --color-game-bg: #0A0F1F;
+  --color-dark-surface: #111827;
+  --color-neon-blue: #00BFFF;
+  --color-text-primary: #F0F4F8;
+  --color-text-secondary: #9CA3AF;
+  --color-correct: #10B981;
+  --color-wrong: #EF4444;
+}
+
+@layer base {
+  body {
+    @apply bg-game-bg text-text-primary font-tajawal antialiased min-h-screen selection:bg-neon-blue/30;
+    background: radial-gradient(circle at 50% 0%, #111827 0%, #0A0F1F 100%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[#121826]/70 backdrop-blur-[14px] border border-white/5 rounded-[24px];
+    box-shadow: 0 0 12px rgba(0, 150, 255, 0.1);
+  }
+  
+  .game-button {
+    @apply transition-all duration-300 active:scale-95 disabled:pointer-events-none rounded-[40px];
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.2);
+  }
+
+  .font-academic {
+    font-family: var(--font-academic);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+
+/* Custom scrollbar for better look */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/5 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/10;
+}
+
