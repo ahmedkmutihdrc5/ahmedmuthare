@@ -163,5 +163,177 @@ export const QUESTION_BANK: Partial<Question>[] = [
     correctOptionId: "B",
     explanation: "Stability means that equal keys stay in the same relative order as they were in the input.",
     keywords: [{ en: "Sorting", ar: "الترتيب" }, { en: "Stable", ar: "مستقر" }]
+  },
+
+  // --- NEW QUESTIONS BATCH (University Level) ---
+
+  // Chapter 4: Lists
+  {
+    id: "Q4",
+    type: "standard",
+    text: "Which structure allows non-contiguous (غير متتالية) memory storage for elements, unlike an array (المصفوفة)?",
+    textArabic: "أي هيكل يسمح بتخزين العناصر في ذاكرة غير متتالية، على عكس المصفوفة؟",
+    textArabicSimple: "المصفوفة مثل العمارة، الشقق لازم وحدة ورا الثانية. الـ Pointer structure مثل البيوت المتوزعة، كل بيت يدلنا على اللي بعده بالمؤشر.",
+    options: [
+      { id: "A", text: "Array (المصفوفة)", textArabic: "المصفوفة" },
+      { id: "B", text: "Pointer structure (هيكل المؤشرات)", textArabic: "هيكل المؤشرات" },
+      { id: "C", text: "Binary Search", textArabic: "البحث الثنائي" },
+      { id: "D", text: "Bubble Sort", textArabic: "فرز الفقاعات" }
+    ],
+    correctOptionId: "B",
+    explanation: "Pointer structures spread items around memory and use links to connect them, unlike contiguous arrays.",
+    keywords: [{ en: "Pointer", ar: "المؤشر" }, { en: "Array", ar: "المصفوفة" }]
+  },
+  {
+    id: "Q5",
+    type: "standard",
+    text: "What is the time complexity (التعقيد الزمني) of deleting the head (الجذر) node (العقدة) in a singly linked list (القائمة المرتبطة البسيطة)?",
+    textArabic: "ما هو التعقيد الزمني لحذف عقدة الرأس في قائمة مرتبطة بسيطة؟",
+    textArabicSimple: "لانك بالبداية ومأشر على أول وحدة، بس تطفر للي وراها وتخلص منها بلحظة O(1).",
+    options: [
+      { id: "A", text: "O(n)", textArabic: "O(n)" },
+      { id: "B", text: "O(log n)", textArabic: "O(log n)" },
+      { id: "C", text: "O(1)", textArabic: "O(1)" },
+      { id: "D", text: "O(n²)", textArabic: "O(n²)" }
+    ],
+    correctOptionId: "C",
+    explanation: "Deleting the head node only requires updating the pointer to the next node, which is O(1).",
+    keywords: [{ en: "Singly Linked List", ar: "القائمة المرتبطة البسيطة" }, { en: "Complexity", ar: "التعقيد" }]
+  },
+
+  // Chapter 5: Stack & Queue
+  {
+    id: "Q18",
+    type: "standard",
+    text: "In expression trees (شجرة التعبير), which data structure (هيكل بيانات) is used to parse a Reverse Polish (البولندي العكسي) expression?",
+    textArabic: "في أشجار التعبير، أي هيكل بيانات يستخدم لتحليل تعبير البولندي العكسي؟",
+    textArabicSimple: "تخيل المعادلة مثل كومة أرقام، تستخدم الـ Stack حتى تخزن الأرقام ولما يجي رمز حسابي تسحب آخر ثنين وتحسبهم.",
+    options: [
+      { id: "A", text: "Queue (الطابور)", textArabic: "الطابور" },
+      { id: "B", text: "Stack (المكدس)", textArabic: "المكدس" },
+      { id: "C", text: "Heap (الكومة)", textArabic: "الكومة" },
+      { id: "D", text: "Graph (الرسم البياني)", textArabic: "الرسم البياني" }
+    ],
+    correctOptionId: "B",
+    explanation: "Parsing RPN (post-fix) into an expression tree is traditionally done using a Stack to manage operands and operators.",
+    keywords: [{ en: "Stack", ar: "المكدس" }, { en: "Expression Tree", ar: "شجرة التعبير" }]
+  },
+  {
+    id: "Q19",
+    type: "standard",
+    text: "Which of the following is a real-world application (تطبيق) of a queue (الطابور)?",
+    textArabic: "أي مما يلي هو تطبيق حقيقي للطابور؟",
+    textArabicSimple: "أي شي بي 'سرة' وبالدور هو طابور، مثل طابعة المكتب اللي تطبع الملفات حسب منو وصل أول (FIFO).",
+    options: [
+      { id: "A", text: "Browser History (سجل المتصفح)", textArabic: "سجل المتصفح" },
+      { id: "B", text: "Undo operation (خيار التراجع)", textArabic: "خيار التراجع" },
+      { id: "C", text: "Printer scheduler (جدولة الطابعة)", textArabic: "جدولة الطابعة" },
+      { id: "D", text: "Recursion (العودية)", textArabic: "العودية" }
+    ],
+    correctOptionId: "C",
+    explanation: "Printer spoolers and OS process scheduling use Queues (FIFO) to handle requests in order.",
+    keywords: [{ en: "Queue", ar: "الطابور" }, { en: "FIFO", ar: "FIFO" }]
+  },
+
+  // Chapter 6: Trees
+  {
+    id: "Q32",
+    type: "standard",
+    text: "The number of edges (حافة) from the root (الجذر) to a specific node (العقدة) is called?",
+    textArabic: "عدد الحواف من الجذر إلى عقدة معينة يسمى؟",
+    textArabicSimple: "تخيل الشجرة عمارة، الجذر هو السطح، من تنزل لآخر طابق هذا النزول يسمى العمق (Depth).",
+    options: [
+      { id: "A", text: "Height (الارتفاع)", textArabic: "الارتفاع" },
+      { id: "B", text: "Depth (العمق)", textArabic: "العمق" },
+      { id: "C", text: "Degree (الدرجة)", textArabic: "الدرجة" },
+      { id: "D", text: "Level (المستوى)", textArabic: "المستوى" }
+    ],
+    correctOptionId: "B",
+    explanation: "Depth measures distance from the root, while Height measures distance to the deepest leaf.",
+    keywords: [{ en: "Depth", ar: "العمق" }, { en: "Root", ar: "الجذر" }]
+  },
+  {
+    id: "Q33",
+    type: "standard",
+    text: "In a min-heap (الكومة الصغرى), where is the largest (الأكبر) element always found?",
+    textArabic: "في الكومة الصغرى، أين نجد العنصر الأكبر دائماً؟",
+    textArabicSimple: "بالـ Min-heap، الصغير هو الملك وواكف فوك بالجذر. الكبار راح يندفعون لآخر شي وهي الأوراق.",
+    options: [
+      { id: "A", text: "At the root (الجذر)", textArabic: "عند الجذر" },
+      { id: "B", text: "At index 1 (الفهرس 1)", textArabic: "عند الفهرس 1" },
+      { id: "C", text: "In a leaf (ورقة)", textArabic: "في إحدى الأوراق" },
+      { id: "D", text: "In the left subtree", textArabic: "في الشجرة اليسرى" }
+    ],
+    correctOptionId: "C",
+    explanation: "In a Min-heap, the smallest value is at the root, so larger values must reside in the leaf nodes.",
+    keywords: [{ en: "Min-heap", ar: "الكومة الصغرى" }, { en: "Leaf", ar: "ورقة" }]
+  },
+
+  // Chapter 8: Graphs
+  {
+    id: "Q62",
+    type: "standard",
+    text: "Which graph (الرسم البياني) representation (تمثيل) is best for sparse (قليلة الحواف) graphs to save space?",
+    textArabic: "أي تمثيل للرسم البياني هو الأفضل للرسوم قليلة الحواف لتوفير المساحة؟",
+    textArabicSimple: "لو عندك هواية نقاط بس علاقاتهم قليلة، الـ Adjacency list أحسن لأنك تسجل بس اللي بيناتهم علاقة، مو مثل المصفوفة تحجز مكان للكل.",
+    options: [
+      { id: "A", text: "Adjacency Matrix (مصفوفة الجوار)", textArabic: "مصفوفة الجوار" },
+      { id: "B", text: "Adjacency List (قائمة الجوار)", textArabic: "قائمة الجوار" },
+      { id: "C", text: "Expression Tree", textArabic: "شجرة التعبير" },
+      { id: "D", text: "Stack", textArabic: "المكدس" }
+    ],
+    correctOptionId: "B",
+    explanation: "Adjacency Lists are more memory-efficient for sparse graphs where |E| is much smaller than |V|².",
+    keywords: [{ en: "Adjacency List", ar: "قائمة الجوار" }, { en: "Graph", ar: "الرسم البياني" }]
+  },
+  {
+    id: "Q63",
+    type: "standard",
+    text: "In DFS (عمق أول) traversal (الاجتياز), what is used to backtrack (الرجوع) once a dead end is reached?",
+    textArabic: "في اجتياز DFS، ما الذي يستخدم للرجوع عند الوصول لنهاية مسدودة؟",
+    textArabicSimple: "الـ DFS مثل متاهة، تدخل للأخير، ولما تنسد بوجهك لازم تمسح وتشوف وين جنت (Backtrack) باستخدام الـ Stack.",
+    options: [
+      { id: "A", text: "Queue", textArabic: "الطابور" },
+      { id: "B", text: "Stack (المكدس)", textArabic: "المكدس" },
+      { id: "C", text: "Pivot", textArabic: "المحور" },
+      { id: "D", text: "Leaf", textArabic: "ورقة" }
+    ],
+    correctOptionId: "B",
+    explanation: "DFS uses a Stack (directly or via recursion) to store path vertices and backtrack when needed.",
+    keywords: [{ en: "DFS", ar: "عمق أول" }, { en: "Backtrack", ar: "الرجوع" }]
+  },
+
+  // Chapter 10: Sorting
+  {
+    id: "Q83",
+    type: "standard",
+    text: "Selection sort (فرز التحديد) is considered 'not stable (غير مستقر)' because an element can?",
+    textArabic: "يعتبر فرز التحديد غير مستقر لأن العنصر يمكن أن؟",
+    textArabicSimple: "بالـ Selection، ممكن رقم صغير يطفر فوق أرقام تساويه وتخرب الترتيب مالتهم، يسموها 'leap-frog'.",
+    options: [
+      { id: "A", text: "Bubbles to the top", textArabic: "يطفو للقمة" },
+      { id: "B", text: "Leap-frog equal values (يقفز فوق قيم مساوية)", textArabic: "يقفز فوق قيم مساوية له" },
+      { id: "C", text: "Be partitioned", textArabic: "يتم تقسيمه" },
+      { id: "D", text: "Stay in-place", textArabic: "يبقى مكانه" }
+    ],
+    correctOptionId: "B",
+    explanation: "Selection sort can swap an element over other equal-valued elements, changing their relative order.",
+    keywords: [{ en: "Selection Sort", ar: "فرز التحديد" }, { en: "Stable", ar: "مستقر" }]
+  },
+  {
+    id: "Q84",
+    type: "standard",
+    text: "In Quick Sort (الفرز السريع), choosing an already sorted (مرتبة) list's first item as a pivot (المحور) leads to what time complexity?",
+    textArabic: "في الفرز السريع، اختيار أول عنصر في قائمة مرتبة أصلاً كـ محور يؤدي إلى أي تعقيد زمني؟",
+    textArabicSimple: "هذي تعتبر أسوأ حالة للـ Quick sort، لأنك ما كمت تقسم بالتساوي، فراح يصير بطيء جداً O(n²).",
+    options: [
+      { id: "A", text: "O(n log n)", textArabic: "O(n log n)" },
+      { id: "B", text: "O(n)", textArabic: "O(n)" },
+      { id: "C", text: "O(n²)", textArabic: "O(n²)" },
+      { id: "D", text: "O(1)", textArabic: "O(1)" }
+    ],
+    correctOptionId: "C",
+    explanation: "Picking the first element as pivot on a sorted list results in highly unbalanced partitions, leading to n-minus-one passes.",
+    keywords: [{ en: "Quick Sort", ar: "الفرز السريع" }, { en: "Pivot", ar: "المحور" }]
   }
 ];

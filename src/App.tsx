@@ -16,11 +16,20 @@ import { extractQuestions } from './lib/gemini';
 
 import { QUESTION_BANK } from './lib/bank';
 
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
 export default function App() {
   const [mode, setMode] = useState<AppMode>('setup');
   const [difficulty, setDifficulty] = useState<Difficulty>('medium');
   const [trainingMode, setTrainingMode] = useState<TrainingMode>('exam');
-  const [questions, setQuestions] = useState<Question[]>(QUESTION_BANK as Question[]);
+  const [questions, setQuestions] = useState<Question[]>([]);
   const [loading, setLoading] = useState(false);
   const [loadingText, setLoadingText] = useState('Generating Questions...');
 
@@ -35,7 +44,7 @@ export default function App() {
 
   const startSetup = () => {
     setMode('setup');
-    setQuestions(QUESTION_BANK as Question[]);
+    setQuestions([]);
     setCurrentIndex(0);
     setScore(0);
     setIsAnswered(false);
@@ -44,13 +53,13 @@ export default function App() {
   };
 
   const handleStartTraining = () => {
-    // Start immediately with existing bank
+    // Start with a shuffled version of the bank
+    const shuffledBank = shuffleArray(QUESTION_BANK as Question[]);
+    setQuestions(shuffledBank);
     setMode('quiz');
     
-    // In background, ensure we have a good buffer if needed
-    if (questions.length < 20) {
-      loadMoreQuestions();
-    }
+    // Immediately pre-fetch the next batch of UNIQUE AI questions
+    loadMoreQuestions();
   };
 
   const loadMoreQuestions = async () => {

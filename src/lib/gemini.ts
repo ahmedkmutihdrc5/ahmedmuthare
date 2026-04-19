@@ -131,6 +131,16 @@ export async function extractQuestions(content: string, difficulty: string, trai
     Act as a strict yet helpful University Professor and Exam Designer.
     Create a 10-question exam for a student using the "Triple Shot" system.
     
+    CRITICAL: YOU MUST GENERATE UNIQUE QUESTIONS. DO NOT REPEAT QUESTIONS FROM PREVIOUS TURNS.
+    Diversify the topics across:
+    - Chapter 4: Linked Lists (Singly, Doubly, Circular)
+    - Chapter 5: Stacks & Queues (Implementation, LIFO/FIFO)
+    - Chapter 6: Trees (BST, Traversal, Heaps)
+    - Chapter 8: Graphs (BFS, DFS, Matrix/List)
+    - Chapter 10: Sorting (Quick, Heap, Bubble, etc.)
+
+    Mix these topics randomly within the 10 questions.
+    
     FOCUS AREA: ${context}
     DIFFICULTY: ${difficulty}
     TRAINING MODE: ${trainingMode}
