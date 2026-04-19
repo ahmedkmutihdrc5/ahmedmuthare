@@ -145,7 +145,7 @@ export async function extractQuestions(content: string, difficulty: string, trai
     LANGUAGE RULES (STRICT):
     - text: Write the question in PROFESSIONAL ENGLISH. Every technical term (from the list below) MUST be followed by its Arabic translation in parentheses immediately after the term.
       Example: "What is a pointer (المؤشر) in programming (البرمجة)?"
-    - options: Each option MUST follow the same format: English term followed by (Arabic translation) if it's a technical keyword.
+    - options: Each option MUST follow the same format: English term followed by (Arabic translation) if it's a technical keyword. Do NOT under any circumstances include a checkmark (✅) or any indicator of the correct answer in the option text. The correct answer must only be identified via the correctOptionId field.
     - textArabic: A full professional Arabic translation of the question.
     - textArabicSimple: A VERY simple explanation in Iraqi dialect (explain like a friend). Keep tech terms in English.
     - explanation: Professional Arabic explanation. Keep tech terms in English.

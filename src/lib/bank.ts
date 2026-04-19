@@ -11,7 +11,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     options: [
       { id: "A", text: "O(1)", textArabic: "O(1)" },
       { id: "B", text: "O(log n)", textArabic: "O(log n)" },
-      { id: "C", text: "O(n)", textArabic: "O(n) ✅" },
+      { id: "C", text: "O(n)", textArabic: "O(n)" },
       { id: "D", text: "O(n log n)", textArabic: "O(n log n)" }
     ],
     correctOptionId: "C",
@@ -26,7 +26,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabicSimple: "المزدوجة يعني تباوع كدام وتراقب وره، فعدها مؤشرين للـ Next والـ Prev.",
     options: [
       { id: "A", text: "1", textArabic: "1" },
-      { id: "B", text: "2", textArabic: "2 ✅" },
+      { id: "B", text: "2", textArabic: "2" },
       { id: "C", text: "3", textArabic: "3" },
       { id: "D", text: "0", textArabic: "0" }
     ],
@@ -42,7 +42,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabicSimple: "هي دائرية، يعني الحلقة مسدودة. آخر وحدة ترجع تكمش ايد أول وحدة (Root).",
     options: [
       { id: "A", text: "None", textArabic: "لا شيء" },
-      { id: "B", text: "The root (الجذر)", textArabic: "الجذر ✅" },
+      { id: "B", text: "The root (الجذر)", textArabic: "الجذر" },
       { id: "C", text: "The middle node", textArabic: "العقدة الوسطى" },
       { id: "D", text: "Itself", textArabic: "نفسها" }
     ],
@@ -60,7 +60,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabicSimple: "مثل ماعون الأكل، آخر واحد تغسله وتخليه فوك، هو أول واحد راح تستخدمه.",
     options: [
       { id: "A", text: "Queue (الطابور)", textArabic: "الطابور" },
-      { id: "B", text: "Stack (المكدس)", textArabic: "المكدس ✅" },
+      { id: "B", text: "Stack (المكدس)", textArabic: "المكدس" },
       { id: "C", text: "Tree (الشجرة)", textArabic: "الشجرة" },
       { id: "D", text: "Graph (الرسم البياني)", textArabic: "الرسم البياني" }
     ],
@@ -76,7 +76,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabicSimple: "بالطابور (السرى)، اللي يجي جديد يوكف بآخر السرى (Rear).",
     options: [
       { id: "A", text: "Front", textArabic: "المقدمة" },
-      { id: "B", text: "Rear (الذيل)", textArabic: "الذيل ✅" },
+      { id: "B", text: "Rear (الذيل)", textArabic: "الذيل" },
       { id: "C", text: "Middle", textArabic: "المنتصف" },
       { id: "D", text: "Root", textArabic: "الجذر" }
     ],
@@ -94,7 +94,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabicSimple: "بالـ BST، الصغير يروح يسار والكبير يروح يمين.",
     options: [
       { id: "A", text: "Greater than the parent (الأب)", textArabic: "أكبر من الأب" },
-      { id: "B", text: "Less than the parent (الأب)", textArabic: "أصغر من الأب ✅" },
+      { id: "B", text: "Less than the parent (الأب)", textArabic: "أصغر من الأب" },
       { id: "C", text: "Equal to the parent", textArabic: "مساوٍ للأب" },
       { id: "D", text: "Zero", textArabic: "صفر" }
     ],
@@ -110,7 +110,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabic: "عند تنفيذ طابور باستخدام مكدسين، ما هو التعقيد الزمني المطفأ لعملية إزالة واحدة؟",
     options: [
       { id: "A", text: "O(n)", textArabic: "O(n)" },
-      { id: "B", text: "O(1)", textArabic: "O(1) ✅" },
+      { id: "B", text: "O(1)", textArabic: "O(1)" },
       { id: "C", text: "O(log n)", textArabic: "O(log n)" },
       { id: "D", text: "O(n²)", textArabic: "O(n²)" }
     ],
@@ -125,7 +125,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     text: "Which traversal (الاجتياز) of a graph (الرسم البياني) uses a queue (الطابور)?",
     textArabic: "أي اجتياز للرسم البياني يستخدم الطابور؟",
     options: [
-      { id: "A", text: "BFS (اتساع أول)", textArabic: "اتساع أول ✅" },
+      { id: "A", text: "BFS (اتساع أول)", textArabic: "اتساع أول" },
       { id: "B", text: "DFS (عمق أول)", textArabic: "عمق أول" },
       { id: "C", text: "Quick Sort", textArabic: "الفرز السريع" },
       { id: "D", text: "Binary Search", textArabic: "البحث الثنائي" }
@@ -143,7 +143,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     options: [
       { id: "A", text: "O(n log n)", textArabic: "O(n log n)" },
       { id: "B", text: "O(n)", textArabic: "O(n)" },
-      { id: "C", text: "O(n²)", textArabic: "O(n²) ✅" },
+      { id: "C", text: "O(n²)", textArabic: "O(n²)" },
       { id: "D", text: "O(1)", textArabic: "O(1)" }
     ],
     correctOptionId: "C",
@@ -156,7 +156,7 @@ export const QUESTION_BANK: Partial<Question>[] = [
     textArabic: "تسمى خوارزمية الترتيب مستقرة إذا كانت؟",
     options: [
       { id: "A", text: "Always takes O(n log n)", textArabic: "دائماً تأخذ O(n log n)" },
-      { id: "B", text: "Preserves the relative order of equal elements", textArabic: "تحافظ على الترتيب النسبي للعناصر المتساوية ✅" },
+      { id: "B", text: "Preserves the relative order of equal elements", textArabic: "تحافظ على الترتيب النسبي للعناصر المتساوية" },
       { id: "C", text: "Uses no extra space", textArabic: "لا تستخدم مساحة إضافية" },
       { id: "D", text: "Can sort nodes (العقدة) in a list", textArabic: "يمكنها ترتيب العقد في قائمة" }
     ],
